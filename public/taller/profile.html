@@ -1,0 +1,27 @@
+	<section class="container">
+		<h1 class="center encabezado-perfil redondeado">Perfil</h1>
+		<section id="perfil row">
+			<article id="personal">
+				<article class="col-md-4 redondeado foto-perfil">
+					<img  class="img-responsive" ng-src="../../fotos/{{usuarioResult.UUID}}" alt="Foto">
+				</article>
+				<article class="col-md-8 redondeado informacion">
+					<article class="encabezado-personal">
+						<label id="nombre">Nombre: {{usuarioResult.nombre}}</label>
+						<label id="apellido">{{usuarioResult.apellido}}</label>
+					</article>
+					<article class="encabezado-personal">
+						<label id="edad">Edad: {{usuarioResult.edad}}</label>	
+					</article>	
+					<section>
+						<article>
+							<label id="descripcion">Descripcion</label>
+						</article>
+						<label id="contenido-descripcion">
+							{{usuarioResult.mensaje}}
+						</label>
+					</section>				
+				</article>
+			</article>
+		</section>
+	</section>	

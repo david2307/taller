@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="tallerApp">
+    <head>
+         <title>Taller Android</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="taller/lib/angular/angular.js" ></script>
+        <script type="text/javascript" src="taller/js/controllers.js"></script>
+        <script type="text/javascript" src="taller/js/services.js"></script>
+        <script type="text/javascript" src="taller/lib/angular/angular-resource.js"></script>
+    </head>
+    <body ng-controller="LoginController">
+        <div id="main-container">
+            <header id="header">
+                <h1>TALLER ANDROID, LA ONDA</h1>
+            </header>
+            <section id="login">   
+                <form class="form">
+                    <p class="input">
+                        <label>NickName: </label>
+                        <input type="text" ng-model="nick" name="nickName" />
+                    </p>
+                    <p class="input">
+                        <label>Password: </label>
+                        <input type="text" ng-model="pass" name="password" />
+                    </p>
+                    <button ng-click="loguear()">PA DENTRO!</button>
+                </form>
+                <p>1 + 2 = {{ 1 + 2 }}</p>
+                {{usuarioResult.mensaje}}
+            </section>
+            <footer id="footer">
+                <p>CODEALA</p>
+            </footer>
+        </div>
+    </body>
+</html>

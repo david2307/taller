@@ -1,0 +1,42 @@
+.center{
+	text-align:center;
+}
+
+.encabezado-perfil{
+	background-color: #00698C;
+	padding: 10px 0;
+	widows: 100%;
+}
+
+.encabezado-personal{
+	font-size:19px;
+	font-weight: bold;
+	padding: 5px 5px;
+	width: 100%;
+}
+
+.foto-perfil{
+	background-color: #fff;
+	max-width: 380px;
+	height: auto;
+}
+
+.informacion{
+	background-color: #d0d0d0;
+	border:none;
+	min-height: 380px;
+}
+
+
+.redondeado{
+	border-radius: 4px;
+}
+
+#descripcion{
+	font-size: 19px;
+	padding: 5px 5px;
+}
+
+#contenido-descripcion{
+	padding: 5px 5px;
+}
