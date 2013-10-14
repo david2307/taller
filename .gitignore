@@ -1,0 +1,33 @@
+#################
+## Eclipse
+#################
+
+*.pydevproject
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# Mac crap
+.DS_Store
+
+
+#################
+## Play Framework
+#################
+modules/*
+eclipse/*
+data/*
+db/*
+tmp/*
