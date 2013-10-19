@@ -1,12 +1,10 @@
 <h1 class="center">Taller UMG</h1>
 <section ng-controller="LoginController" class="container">
-    <form class="form-signin" action="#/profile/1" novalidate>
+    <form class="form-signin" ng-submit="loguear();">
         <h2 class="form-signin-heading">Login</h2>
         <input id="nickName"  type="text" class="form-control" placeholder="nickName" ng-model="nick" autofocus />
         <input id="password"  type="password" class="form-control" placeholder="Password" ng-model="pass" />
-        <button class="btn btn-lg btn-primary btn-block" ng-click="loguear()">PA DENTRO!</button>
+        {{loginResult.mensaje}}
+        <input type="submit" class="btn btn-lg btn-primary btn-block" value="PA DENTRO!">
     </form>
-    <p>1 + 2 = {{ 1 + 2 }}</p>
-    {{loginResult.id}}
-    {{loginResult.mensaje}}
 </section>

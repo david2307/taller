@@ -11,18 +11,26 @@ tallerApp.config(function($routeProvider, $locationProvider) {
     });
 });
 
-function LoginController($scope, $resource) {
-    $scope.login = $resource('http://localhost:port/servicio/:action',
+function LoginController($scope, $resource, $location) {
+    $scope.login = $resource('../../servicio/:action',
         {port:':9000', action: 'login', callback:'JSON_CALLBACK'});
     
     $scope.loguear = function (){
-        $scope.loginResult = $scope.login.get({nickName:$scope.nick, password:$scope.pass});
+        $scope.loginResult = $scope.login.get({nickName:$scope.nick, password:$scope.pass}, function (data) {
+            if (data.result == "true") {
+                console.log("Estoy dentro del true" + data.result);
+                var path = "/profile/"+data.id
+                $location.path(path);
+            }else {
+                console.log("Estoy en false");
+            }
+        });
     }
 };
 
 
 function ProfileController($scope, $routeParams, $resource) {
-    $scope.usuario = $resource('http://localhost:port/servicio/:action',
+    $scope.usuario = $resource('../../servicio/:action',
         {port:':9000', action: 'usuario', callback:'JSON_CALLBACK'});
     console.log($routeParams.userId);
     $scope.usuarioResult = $scope.usuario.get({id:$routeParams.userId});
