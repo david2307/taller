@@ -22,7 +22,7 @@ function LoginController($scope, $resource, $location) {
                 var path = "/profile/"+data.id
                 $location.path(path);
             }else {
-                console.log("Estoy en false");
+                console.log("No sirve");
             }
         });
     }
